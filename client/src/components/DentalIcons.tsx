@@ -13,6 +13,5 @@ export function GraduationIcon(props: IconProps) { return <svg {...base(props)}>
 export function ShieldIcon(props: IconProps) { return <svg {...base(props)}><path d="M24 6c5 4 10 5 16 6v10c0 10-6 17-16 21C14 39 8 32 8 22V12c6-1 11-2 16-6Z"/><path d="m16 24 5 5 11-12"/></svg>; }
 export function CareIcon(props: IconProps) { return <svg {...base(props)}><path d="M24 39 9 25c-8-8 4-20 12-11l3 4 3-4c8-9 20 3 12 11L24 39Z"/><path d="M15 27c5-3 13-3 18 0"/></svg>; }
 export function LocationIcon(props: IconProps) { return <svg {...base(props)}><path d="M38 20c0 11-14 23-14 23S10 31 10 20a14 14 0 1 1 28 0Z"/><circle cx="24" cy="20" r="5"/></svg>; }
-export function SmileDivider(props: IconProps) { return <svg {...base(props)} viewBox="0 0 96 24"><path d="M5 6c20 16 61 17 86 1"/><path d="M22 12c14 7 37 8 53 1"/></svg>; }
 
 export const dentalIcons = { tooth: ToothIcon, implant: ImplantIcon, smile: SmileIcon, veneer: VeneerIcon, braces: BracesIcon, clock: ClockIcon, graduation: GraduationIcon, shield: ShieldIcon, care: CareIcon, location: LocationIcon };
