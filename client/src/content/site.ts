@@ -4,12 +4,15 @@ import consultorioRaiox from "@/assets/images/consultorio-raiox.jpg";
 import recepcao from "@/assets/images/recepcao.jpg";
 import copaCafe from "@/assets/images/copa-cafe.jpg";
 import germanoAvatar from "@/assets/images/dr-germano-avatar.jpg";
-import logoInstituto from "@/assets/images/bannerslogan.jpeg";
+import logoDrGermano from "@/assets/images/logo-drgermano.png";
+import iconeDrGermano from "@/assets/images/icone-drgermano.png";
 
 export const site = {
   name: "Dr. Germano Vainer Viegas",
   specialty: "Reabilitação Oral · Implantes · Próteses",
   cro: "CRO-SP 128024",
+  logoImage: logoDrGermano,
+  iconImage: iconeDrGermano,
   whatsapp: "5511912773933",
   whatsappMessage: "Olá! Vim pelo site do Dr. Germano.",
   urgencyMessage: "Olá! Vim pelo site do Dr. Germano e preciso de atendimento de urgência.",
@@ -130,7 +133,7 @@ export const site = {
   footer: {
     institute: "Instituto Implante Seu Sorriso",
     rights: "Todos os direitos reservados.",
-    logo: logoInstituto,
+    logo: logoDrGermano,
   },
 } as const;
 
