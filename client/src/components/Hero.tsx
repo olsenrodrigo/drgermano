@@ -196,7 +196,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
             {/*
               WHITELABEL: Substituir por foto do profissional quando disponivel:
 
-              import fotoMedico from "../assets/images/doctor-portrait.jpg";
+              import fotoMedico from "../assets/images/dr-germano-retrato.jpg";
 
               <div className="w-full h-full rounded-xl overflow-hidden shadow-lg">
                 <img src={fotoMedico} alt="Dr(a). Nome" className="w-full h-full object-cover object-top" />
