@@ -3,7 +3,8 @@ import consultorioCadeira from "@/assets/images/consultorio-cadeira.jpg";
 import consultorioRaiox from "@/assets/images/consultorio-raiox.jpg";
 import recepcao from "@/assets/images/recepcao.jpg";
 import copaCafe from "@/assets/images/copa-cafe.jpg";
-import germanoAvatar from "@/assets/images/dr-germano-avatar.jpg";
+import germanoHero from "@/assets/images/dr-germano-hero.jpg";
+import germanoClinica from "@/assets/images/dr-germano-clinica.jpg";
 import logoDrGermano from "@/assets/images/logo-drgermano.png";
 import iconeDrGermano from "@/assets/images/icone-drgermano.png";
 
@@ -43,6 +44,8 @@ export const site = {
       "Implantes, próteses, estética em cerâmica e ortodontia, feitos por quem não abre mão da ética e do compromisso com o paciente.",
     ],
     image: consultorioPrincipal,
+    portrait: germanoHero,
+    portraitAlt: "Dr. Germano Vainer Viegas segurando um modelo de prótese sobre implantes",
   },
   about: {
     title: "Responsabilidade que vai até o fim do tratamento.",
@@ -58,7 +61,8 @@ export const site = {
       "Mestre em Prótese — UNICAMP, Piracicaba",
       "Bacharel em Odontologia — UFPE, Recife",
     ],
-    image: germanoAvatar,
+    image: germanoClinica,
+    imageAlt: "Dr. Germano Vainer Viegas no consultório em Santa Cecília",
   },
   differentials: [
     "Responsabilidade — o caso é acompanhado até o fim",
