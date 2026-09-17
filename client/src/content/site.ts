@@ -22,8 +22,7 @@ export const site = {
   address: "Rua Dr. Albuquerque Lins, 537 — Conjunto 84 — Higienópolis — São Paulo/SP",
   mapsUrl: "https://share.google/fS0FqK2aHzrjBpgBQ",
   hours: "Geralmente das 9h às 17h30, com possibilidade de atendimento estendido até as 19h mediante agendamento prévio.",
-  // TODO: confirmar e-mail do consultório antes de exibir.
-  email: null,
+  email: "contato@germanovainer.com.br",
   // TODO: confirmar telefone fixo antes de exibir (hoje só WhatsApp).
   phone: null,
   // TODO: confirmar informações de estacionamento e acessibilidade antes de exibir.
