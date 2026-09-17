@@ -351,6 +351,11 @@ export function Footer() {
           <p>{site.neighborhood}</p>
           <p>{site.transit}</p>
           <a className="maps-link" href={site.mapsUrl} target="_blank" rel="noreferrer">{site.ctas.maps}</a>
+          {/* <p> próprio: `.footer-address .maps-link` é inline-block, então dois
+              links seguidos dividiriam a mesma linha com o do Maps. */}
+          {site.email && (
+            <p><a className="maps-link" href={`mailto:${site.email}`}>{site.email}</a></p>
+          )}
         </div>
         <div className="footer-links">
           <nav aria-label="Navegação do rodapé">
