@@ -8,6 +8,24 @@ import germanoSobre from "@/assets/images/dr-germano-sobre.jpg";
 import logoDrGermano from "@/assets/images/logo-drgermano.png";
 import iconeDrGermano from "@/assets/images/icone-drgermano.png";
 
+/**
+ * Dados cadastrais da pessoa jurídica, conferidos na Receita Federal (CNPJ ATIVO,
+ * consulta em 22/09/2026). Aparecem como texto legível no rodapé e no JSON-LD para a
+ * verificação de negócio da Meta (Business Manager) casar o site com o cadastro.
+ * O bairro oficial do cadastro é Santa Cecília; "Higienópolis" é a região como o
+ * consultório se apresenta. Espelhados em client/index.html (meta + noscript).
+ */
+export const BUSINESS = {
+  legalName: "INST IMPLANTE SEU SORRISO UNIPESSOAL LTDA",
+  cnpj: "54.596.502/0001-56",
+  street: "Rua Dr. Albuquerque Lins, 537 — Conj. 84",
+  district: "Santa Cecília",
+  city: "São Paulo",
+  state: "SP",
+  postalCode: "01230-001",
+  address: "Rua Dr. Albuquerque Lins, 537 — Conj. 84, Santa Cecília, São Paulo — SP, CEP 01230-001",
+} as const;
+
 export const site = {
   name: "Dr. Germano Vainer Viegas",
   specialty: "Reabilitação Oral • Implantes • Próteses",
@@ -17,6 +35,7 @@ export const site = {
   whatsapp: "5511912773933",
   whatsappMessage: "Olá! Vim pelo site do Dr. Germano e gostaria de agendar uma avaliação.",
   clinicName: "Implante Seu Sorriso",
+  street: "Rua Dr. Albuquerque Lins, 537 — Conjunto 84",
   neighborhood: "Higienópolis — São Paulo/SP",
   transit: "Próximo à Estação Marechal Deodoro — Linha 3–Vermelha do Metrô",
   address: "Rua Dr. Albuquerque Lins, 537 — Conjunto 84 — Higienópolis — São Paulo/SP",

@@ -6,7 +6,7 @@
 //     Todo compartilhamento no WhatsApp saía sem imagem. Agora sai da origem real.
 //   - O schema é `Dentist`, não `Physician`: o registro é CRO, não CRM.
 
-import { site } from "./site";
+import { BUSINESS, site } from "./site";
 
 /** Sem barra final. Produção responde em www (o ápice redireciona 301). */
 export const ORIGIN = "https://www.germanovainer.com.br";
@@ -56,6 +56,7 @@ export function grafoJsonLd() {
       streetAddress: "Rua Dr. Albuquerque Lins, 537 — Conjunto 84",
       addressLocality: "Higienópolis, São Paulo",
       addressRegion: "SP",
+      postalCode: BUSINESS.postalCode,
       addressCountry: "BR",
     },
     areaServed: { "@type": "City", name: "São Paulo" },
@@ -65,7 +66,20 @@ export function grafoJsonLd() {
       name: t.title,
       description: t.text,
     })),
-    parentOrganization: { "@type": "Dentist", name: site.clinicName },
+    parentOrganization: {
+      "@type": "Organization",
+      name: site.clinicName,
+      legalName: BUSINESS.legalName,
+      taxID: BUSINESS.cnpj,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: BUSINESS.street,
+        addressLocality: `${BUSINESS.district}, ${BUSINESS.city}`,
+        addressRegion: BUSINESS.state,
+        postalCode: BUSINESS.postalCode,
+        addressCountry: "BR",
+      },
+    },
   };
 
   const faqPage = {
@@ -104,6 +118,7 @@ export function llmsTxt() {
     `- Registro: ${site.cro}`,
     `- Clínica: ${site.clinicName}`,
     `- Endereço: ${site.address}`,
+    `- Razão social: ${BUSINESS.legalName} (CNPJ ${BUSINESS.cnpj})`,
     `- Como chegar: ${site.transit}`,
     `- Horário: ${site.hours}`,
     `- WhatsApp: https://wa.me/${site.whatsapp}`,

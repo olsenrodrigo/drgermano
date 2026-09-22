@@ -134,6 +134,8 @@ footer { padding:52px 0 28px; background:white; border-top:1px solid #dce7ed; }
 .footer-links nav a:hover { color:var(--royal); }
 .footer-legal { margin-top:36px; padding-top:20px; border-top:1px solid #eef3f6; }
 .footer-legal p { margin:0; font-size:.82rem; }
+.footer-business { display:flex; flex-direction:column; gap:3px; margin-bottom:14px; font-style:normal; font-size:.86rem; line-height:1.6; color:var(--ink-soft); }
+.footer-business span:first-child { color:var(--navy-deep); font-weight:600; }
 
 @media (max-width:1040px) and (min-width:801px) {
   .hero-grid { grid-template-columns:minmax(0,1fr) 270px; gap:40px; }

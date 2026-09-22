@@ -2,7 +2,7 @@ import { useState, type FormEvent, type ReactNode } from "react";
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { z } from "zod";
-import { site, whatsappUrl } from "@/content/site";
+import { BUSINESS, site, whatsappUrl } from "@/content/site";
 import { GraduationIcon, LocationIcon, dentalIcons } from "@/components/DentalIcons";
 
 const sectionClass = "section-space";
@@ -348,6 +348,7 @@ export function Footer() {
         </div>
         <div className="footer-address">
           <strong>{site.footer.institute}</strong>
+          <p>{site.street}</p>
           <p>{site.neighborhood}</p>
           <p>{site.transit}</p>
           <a className="maps-link" href={site.mapsUrl} target="_blank" rel="noreferrer">{site.ctas.maps}</a>
@@ -365,6 +366,12 @@ export function Footer() {
         </div>
       </div>
       <div className="site-container footer-legal">
+        {/* Dados cadastrais como constam na Receita Federal (razão social, CNPJ e
+            endereço registrado). Fonte: BUSINESS em content/site.ts. */}
+        <address className="footer-business">
+          <span>{BUSINESS.legalName} · CNPJ {BUSINESS.cnpj}</span>
+          <span>{BUSINESS.address}</span>
+        </address>
         <p>© {new Date().getFullYear()} {site.name}. {site.footer.rights}</p>
       </div>
     </footer>
