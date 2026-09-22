@@ -369,7 +369,9 @@ export function Footer() {
         {/* Dados cadastrais como constam na Receita Federal (razão social, CNPJ e
             endereço registrado). Fonte: BUSINESS em content/site.ts. */}
         <address className="footer-business">
-          <span>{BUSINESS.legalName} · CNPJ {BUSINESS.cnpj}</span>
+          {/* Template string, não expressões adjacentes: o SSR separaria "CNPJ" do
+              número com <!-- --> e o crawler de verificação não acharia a string. */}
+          <span>{`${BUSINESS.legalName} · CNPJ ${BUSINESS.cnpj}`}</span>
           <span>{BUSINESS.address}</span>
         </address>
         <p>© {new Date().getFullYear()} {site.name}. {site.footer.rights}</p>
